@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rajan Parmar — Backend Developer</title>
-<meta name="description" content="Rajan Parmar — Computer Science student & backend developer skilled in PHP, MySQL, JavaScript.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajan Parmar — Backend Developer</title>
+  <meta name="description"
+    content="Rajan Parmar — Computer Science student & backend developer skilled in PHP, MySQL, JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- noise / grain overlay -->
-<div class="grain"></div>
+  <!-- noise / grain overlay -->
+  <div class="grain"></div>
 
-<!-- ============ TOP NAV (file tabs) ============ -->
-<header class="topbar">
-  <div class="topbar-inner">
-    <div class="brand">
-      <span class="brand-bracket">&lt;</span>RP<span class="brand-bracket">/&gt;</span>
+  <!-- ============ TOP NAV (file tabs) ============ -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-bracket">&lt;</span>RP<span class="brand-bracket">/&gt;</span>
+      </div>
+      <nav class="tabs" id="tabs">
+        <a href="#about" class="tab active" data-target="about">About</a>
+        <a href="#skills" class="tab" data-target="skills">Skills</a>
+        <a href="#experience" class="tab" data-target="experience">Experience</a>
+        <a href="#projects" class="tab" data-target="projects">Projects</a>
+        <a href="#contact" class="tab" data-target="contact">Contact</a>
+      </nav>
+      <a class="resume-btn" href="#contact">
+        Hire me
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <nav class="tabs" id="tabs">
-      <a href="#about" class="tab active" data-target="about">About</a>
+    <nav class="mobile-tabs" id="mobileTabs">
+      <a href="#about" class="tab" data-target="about">About</a>
       <a href="#skills" class="tab" data-target="skills">Skills</a>
       <a href="#experience" class="tab" data-target="experience">Experience</a>
       <a href="#projects" class="tab" data-target="projects">Projects</a>
       <a href="#contact" class="tab" data-target="contact">Contact</a>
     </nav>
-    <a class="resume-btn" href="#contact">
-      Hire me
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <nav class="mobile-tabs" id="mobileTabs">
-    <a href="#about" class="tab" data-target="about">About</a>
-    <a href="#skills" class="tab" data-target="skills">Skills</a>
-    <a href="#experience" class="tab" data-target="experience">Experience</a>
-    <a href="#projects" class="tab" data-target="projects">Projects</a>
-    <a href="#contact" class="tab" data-target="contact">Contact</a>
-  </nav>
-</header>
+  </header>
 
-<main>
+  <main>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="about">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="eyebrow">// software development intern · CSE student</p>
-        <h1>Rajan Parmar<span class="cursor">_</span></h1>
-        <p class="hero-role">Backend developer in training — <span class="accent">PHP</span>, <span class="accent">MySQL</span> &amp; clean, working code.</p>
-        <p class="hero-desc">
-          I'm a Computer Science student who likes figuring out how the server side of
-          the web actually works — authentication, CRUD, databases, the plumbing
-          behind the page. Still early in the journey, already shipping real projects.
-        </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View my projects</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
-        </div>
-        <div class="hero-meta">
-          <span>📍 Ahmedabad, Gujarat</span>
-          <span class="dot">•</span>
-          <span>🎓 B.Tech CSE, Silver Oak University</span>
-        </div>
-      </div>
-
-      <div class="hero-terminal" aria-hidden="false">
-        <div class="terminal-card">
-          <div class="terminal-titlebar">
-            <span class="tdot red"></span><span class="tdot yellow"></span><span class="tdot green"></span>
-            <span class="terminal-filename">whoami.sh</span>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="about">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">// software development intern · CSE student</p>
+          <h1>Rajan Parmar<span class="cursor">_</span></h1>
+          <p class="hero-role">Backend developer in training — <span class="accent">PHP</span>, <span
+              class="accent">MySQL</span> &amp; clean, working code.</p>
+          <p class="hero-desc">
+            I'm a Computer Science student who likes figuring out how the server side of
+            the web actually works — authentication, CRUD, databases, the plumbing
+            behind the page. Still early in the journey, already shipping real projects.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View my projects</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
           </div>
-          <pre class="terminal-body"><code><span class="t-prompt">rajan@dev</span><span class="t-sep">:~$</span> whoami
+          <div class="hero-meta">
+            <span>📍 Ahmedabad, Gujarat</span>
+            <span class="dot">•</span>
+            <span>🎓 B.Tech CSE, Silver Oak University</span>
+          </div>
+        </div>
+
+        <div class="hero-terminal" aria-hidden="false">
+          <div class="terminal-card">
+            <div class="terminal-titlebar">
+              <span class="tdot red"></span><span class="tdot yellow"></span><span class="tdot green"></span>
+              <span class="terminal-filename">whoami.sh</span>
+            </div>
+            <pre class="terminal-body"><code><span class="t-prompt">rajan@dev</span><span class="t-sep">:~$</span> whoami
 
 <span class="t-key">name</span>      <span class="t-str">"Parmar Rajan"</span>
 <span class="t-key">role</span>      <span class="t-str">"Backend Developer (Trainee)"</span>
@@ -84,306 +90,313 @@
 <span class="t-key">learning</span>  <span class="t-bool">true</span>
 
 <span class="t-prompt">rajan@dev</span><span class="t-sep">:~$</span> <span class="t-blink">_</span></code></pre>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SKILLS ============ -->
-  <section class="section" id="skills">
-    <div class="section-head">
-      <p class="eyebrow">// skills.json</p>
-      <h2>What I work with</h2>
-      <p class="section-sub">Tools and languages I've used in coursework, training, and personal projects.</p>
-    </div>
-
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon">{ }</div>
-        <h3>Languages</h3>
-        <div class="chip-row">
-          <span class="chip">C++</span>
-          <span class="chip">Java</span>
-          <span class="chip">Python</span>
-          <span class="chip">JavaScript</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">⚙</div>
-        <h3>Backend</h3>
-        <div class="chip-row">
-          <span class="chip">PHP</span>
-          <span class="chip">REST-style routing</span>
-          <span class="chip">Authentication</span>
-          <span class="chip">CRUD</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">▣</div>
-        <h3>Frontend</h3>
-        <div class="chip-row">
-          <span class="chip">HTML5</span>
-          <span class="chip">CSS3</span>
-          <span class="chip">JavaScript</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">⛁</div>
-        <h3>Database</h3>
-        <div class="chip-row">
-          <span class="chip">MySQL</span>
-          <span class="chip">SQLite</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">⌥</div>
-        <h3>Tools</h3>
-        <div class="chip-row">
-          <span class="chip">Git</span>
-          <span class="chip">GitHub</span>
-          <span class="chip">VS Code</span>
-          <span class="chip">XAMPP</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon">◇</div>
-        <h3>Concepts</h3>
-        <div class="chip-row">
-          <span class="chip">OOP</span>
-          <span class="chip">MVC</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EXPERIENCE ============ -->
-  <section class="section" id="experience">
-    <div class="section-head">
-      <p class="eyebrow">// experience.log</p>
-      <h2>Experience</h2>
-      <p class="section-sub">Training and internship work that shaped how I write code.</p>
-    </div>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="timeline-card-head">
-            <h3>PHP &amp; MySQL Backend Development</h3>
-            <span class="timeline-date">Jun – Jul 2024</span>
           </div>
-          <p class="timeline-role">Internship Project · Vasna, Gujarat (Remote)</p>
-          <ul>
-            <li>Developed server-side web applications using PHP</li>
-            <li>Integrated a MySQL database for data storage and management</li>
-            <li>Implemented REST-style request handling and form processing</li>
-          </ul>
         </div>
       </div>
+    </section>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="timeline-card-head">
-            <h3>Web Design Training</h3>
-            <span class="timeline-date">Dec 2024 – Apr 2025</span>
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="section-head">
+        <p class="eyebrow">// skills.json</p>
+        <h2>What I work with</h2>
+        <p class="section-sub">Tools and languages I've used in coursework, training, and personal projects.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">{ }</div>
+          <h3>Languages</h3>
+          <div class="chip-row">
+            <span class="chip">C++</span>
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
           </div>
-          <p class="timeline-role">BrainyBeam Technologies · Ahmedabad, Gujarat (Remote)</p>
-          <ul>
-            <li>Learned core web design using HTML, CSS, and JavaScript</li>
-            <li>Built web pages with proper structure and styling</li>
-            <li>Studied how websites are rendered and displayed in browsers</li>
-          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">⚙</div>
+          <h3>Backend</h3>
+          <div class="chip-row">
+            <span class="chip">PHP</span>
+            <span class="chip">REST-style routing</span>
+            <span class="chip">Authentication</span>
+            <span class="chip">CRUD</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">▣</div>
+          <h3>Frontend</h3>
+          <div class="chip-row">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">⛁</div>
+          <h3>Database</h3>
+          <div class="chip-row">
+            <span class="chip">MySQL</span>
+            <span class="chip">SQLite</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">⌥</div>
+          <h3>Tools</h3>
+          <div class="chip-row">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">XAMPP</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">◇</div>
+          <h3>Concepts</h3>
+          <div class="chip-row">
+            <span class="chip">OOP</span>
+            <span class="chip">MVC</span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="education-block">
-      <h3 class="education-title">Education</h3>
-      <div class="education-grid">
-        <div class="edu-card">
-          <p class="edu-degree">B.Tech, Computer Science Engineering</p>
-          <p class="edu-school">Silver Oak University</p>
-          <p class="edu-meta">Expected Graduation: 2028</p>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="section-head">
+        <p class="eyebrow">// experience.log</p>
+        <h2>Experience</h2>
+        <p class="section-sub">Training and internship work that shaped how I write code.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-head">
+              <h3>PHP &amp; MySQL Backend Development</h3>
+              <span class="timeline-date">Jun – Jul 2024</span>
+            </div>
+            <p class="timeline-role">Internship Project · Vasna, Gujarat (Remote)</p>
+            <ul>
+              <li>Developed server-side web applications using PHP</li>
+              <li>Integrated a MySQL database for data storage and management</li>
+              <li>Implemented REST-style request handling and form processing</li>
+            </ul>
+          </div>
         </div>
-        <div class="edu-card">
-          <p class="edu-degree">Diploma in Information Technology</p>
-          <p class="edu-school">Silver Oak University</p>
-          <p class="edu-meta">2022 – 2025 · Grade 8.50</p>
-        </div>
-        <div class="edu-card">
-          <p class="edu-degree">SSC</p>
-          <p class="edu-school">Gujarat State Board</p>
-          <p class="edu-meta">66%</p>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-head">
+              <h3>Web Design Training</h3>
+              <span class="timeline-date">Dec 2024 – Apr 2025</span>
+            </div>
+            <p class="timeline-role">BrainyBeam Technologies · Ahmedabad, Gujarat (Remote)</p>
+            <ul>
+              <li>Learned core web design using HTML, CSS, and JavaScript</li>
+              <li>Built web pages with proper structure and styling</li>
+              <li>Studied how websites are rendered and displayed in browsers</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section class="section" id="projects">
-    <div class="section-head">
-      <p class="eyebrow">// projects.php</p>
-      <h2>Things I've built</h2>
-      <p class="section-sub">A few projects where I practiced backend logic, database design, and UI together.</p>
-    </div>
-
-    <div class="projects-grid">
-
-      <article class="project-card">
-        <div class="project-card-top">
-          <span class="project-tag-main">PHP · MySQL</span>
-          <span class="project-status">Full-stack</span>
-        </div>
-        <h3>CyberConnect</h3>
-        <p class="project-desc">A cyber cafe management system handling user accounts, seat allocation, and service tracking — built to mirror how a real cafe owner would run the floor.</p>
-        <div class="chip-row">
-          <span class="chip chip-sm">HTML</span>
-          <span class="chip chip-sm">CSS</span>
-          <span class="chip chip-sm">JavaScript</span>
-          <span class="chip chip-sm">XAMPP</span>
-        </div>
-        <div class="project-links">
-          <a href="http://freshtable.infinityfreeapp.com/CCMSProject/user/index.php" target="_blank" rel="noopener" class="project-link-btn">Live Demo ↗</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-top">
-          <span class="project-tag-main">Frontend · DB</span>
-          <span class="project-status">E-commerce</span>
-        </div>
-        <h3>ShopSphere</h3>
-        <p class="project-desc">A responsive e-commerce platform with product management, customer interaction flows, and database-backed listings.</p>
-        <div class="chip-row">
-          <span class="chip chip-sm">HTML</span>
-          <span class="chip chip-sm">CSS</span>
-          <span class="chip chip-sm">JavaScript</span>
-        </div>
-        <div class="project-links">
-          <span class="project-link-soon">Coming Soon</span>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-top">
-          <span class="project-tag-main">JavaScript</span>
-          <span class="project-status">Productivity</span>
-        </div>
-        <h3>TaskFlow</h3>
-        <p class="project-desc">A task management app for organizing tasks and tracking progress — built to make daily planning faster and clearer.</p>
-        <div class="chip-row">
-          <span class="chip chip-sm">JavaScript</span>
-        </div>
-        <div class="project-links">
-          <span class="project-link-soon">Coming Soon</span>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-top">
-          <span class="project-tag-main">PHP · MySQL</span>
-          <span class="project-status">Full-stack</span>
-        </div>
-        <h3>FreshTable</h3>
-        <p class="project-desc">A web-based restaurant ordering and management system with customer menu browsing, order billing, inventory tracking, and an admin dashboard for daily sales insights.</p>
-        <div class="chip-row">
-          <span class="chip chip-sm">PHP</span>
-          <span class="chip chip-sm">MySQL</span>
-          <span class="chip chip-sm">JavaScript</span>
-          <span class="chip chip-sm">XAMPP</span>
-        </div>
-        <div class="project-links">
-          <span class="project-link-soon">Coming Soon</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ============ STRENGTHS ============ -->
-  <section class="section section-strengths">
-    <div class="section-head">
-      <p class="eyebrow">// strengths.md</p>
-      <h2>How I work</h2>
-    </div>
-    <div class="strengths-grid">
-      <div class="strength-card">
-        <span class="strength-mark">01</span>
-        <p>Quick learner with a strong problem-solving mindset</p>
-      </div>
-      <div class="strength-card">
-        <span class="strength-mark">02</span>
-        <p>Comfortable working independently or as part of a team</p>
-      </div>
-      <div class="strength-card">
-        <span class="strength-mark">03</span>
-        <p>Dedicated, hardworking, and always looking to improve</p>
-      </div>
-      <div class="strength-card">
-        <span class="strength-mark">04</span>
-        <p>Comfortable picking up real project work under guidance</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section" id="contact">
-    <div class="contact-card">
-      <div class="contact-left">
-        <p class="eyebrow">// contact.sh</p>
-        <h2>Let's build something.</h2>
-        <p class="contact-desc">
-          I'm looking for internship or junior backend developer roles where I can
-          keep learning while contributing real, working code. If that's what
-          you're hiring for — let's talk.
-        </p>
-        <div class="contact-links">
-          <a href="mailto:rajanparmar609@gmail.com" class="contact-link">
-            <span class="contact-link-label">Email</span>
-            <span class="contact-link-value">rajanparmar609@gmail.com</span>
-          </a>
-          <a href="tel:+919313874256" class="contact-link">
-            <span class="contact-link-label">Phone</span>
-            <span class="contact-link-value">+91 93138 74256</span>
-          </a>
-          <a href="https://linkedin.com/in/rajan-parmar-07969224b" target="_blank" rel="noopener" class="contact-link">
-            <span class="contact-link-label">LinkedIn</span>
-            <span class="contact-link-value">/in/rajan-parmar</span>
-          </a>
+      <div class="education-block">
+        <h3 class="education-title">Education</h3>
+        <div class="education-grid">
+          <div class="edu-card">
+            <p class="edu-degree">B.Tech, Computer Science Engineering</p>
+            <p class="edu-school">Silver Oak University</p>
+            <p class="edu-meta">Expected Graduation: 2028</p>
+          </div>
+          <div class="edu-card">
+            <p class="edu-degree">Diploma in Information Technology</p>
+            <p class="edu-school">Silver Oak University</p>
+            <p class="edu-meta">2022 – 2025 · Grade 8.50</p>
+          </div>
+          <div class="edu-card">
+            <p class="edu-degree">SSC</p>
+            <p class="edu-school">Gujarat State Board</p>
+            <p class="edu-meta">66%</p>
+          </div>
         </div>
       </div>
-      <form class="contact-form" id="contactForm">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" placeholder="Your name" required>
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" placeholder="you@company.com" required>
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="4" placeholder="Tell me about the role..." required></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary btn-full">Send message</button>
-        <p class="form-note" id="formNote"></p>
-      </form>
-    </div>
-  </section>
+    </section>
 
-</main>
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="section-head">
+        <p class="eyebrow">// projects.php</p>
+        <h2>Things I've built</h2>
+        <p class="section-sub">A few projects where I practiced backend logic, database design, and UI together.</p>
+      </div>
 
-<footer class="footer">
-  <p>© <span id="year"></span> Parmar Rajan — built from scratch with HTML, CSS &amp; JavaScript.</p>
-  <a href="#about" class="back-top">Back to top ↑</a>
-</footer>
+      <div class="projects-grid">
 
-<script src="script.js"></script>
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag-main">PHP · MySQL</span>
+            <span class="project-status">Full-stack</span>
+          </div>
+          <h3>CyberConnect</h3>
+          <p class="project-desc">A cyber cafe management system handling user accounts, seat allocation, and service
+            tracking — built to mirror how a real cafe owner would run the floor.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">HTML</span>
+            <span class="chip chip-sm">CSS</span>
+            <span class="chip chip-sm">JavaScript</span>
+            <span class="chip chip-sm">XAMPP</span>
+          </div>
+          <div class="project-links">
+            <a href="http://freshtable.infinityfreeapp.com/CCMSProject/user/index.php" target="_blank" rel="noopener"
+              class="project-link-btn">Live Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag-main">Frontend · DB</span>
+            <span class="project-status">E-commerce</span>
+          </div>
+          <h3>ShopSphere</h3>
+          <p class="project-desc">A responsive e-commerce platform with product management, customer interaction flows,
+            and database-backed listings.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">HTML</span>
+            <span class="chip chip-sm">CSS</span>
+            <span class="chip chip-sm">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="ShopSphere/index.html" target="_blank" rel="noopener" class="project-link-btn">Live Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag-main">JavaScript</span>
+            <span class="project-status">Productivity</span>
+          </div>
+          <h3>TaskFlow</h3>
+          <p class="project-desc">A task management app for organizing tasks and tracking progress — built to make daily
+            planning faster and clearer.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="Taskflow/index.html" target="_blank" rel="noopener" class="project-link-btn">Live Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-tag-main">PHP · MySQL</span>
+            <span class="project-status">Full-stack</span>
+          </div>
+          <h3>FreshTable</h3>
+          <p class="project-desc">A web-based restaurant ordering and management system with customer menu browsing,
+            order billing, inventory tracking, and an admin dashboard for daily sales insights.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">PHP</span>
+            <span class="chip chip-sm">MySQL</span>
+            <span class="chip chip-sm">JavaScript</span>
+            <span class="chip chip-sm">XAMPP</span>
+          </div>
+          <div class="project-links">
+            <a href="FreshTable/index.php" target="_blank" rel="noopener" class="project-link-btn">Live Demo ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ STRENGTHS ============ -->
+    <section class="section section-strengths">
+      <div class="section-head">
+        <p class="eyebrow">// strengths.md</p>
+        <h2>How I work</h2>
+      </div>
+      <div class="strengths-grid">
+        <div class="strength-card">
+          <span class="strength-mark">01</span>
+          <p>Quick learner with a strong problem-solving mindset</p>
+        </div>
+        <div class="strength-card">
+          <span class="strength-mark">02</span>
+          <p>Comfortable working independently or as part of a team</p>
+        </div>
+        <div class="strength-card">
+          <span class="strength-mark">03</span>
+          <p>Dedicated, hardworking, and always looking to improve</p>
+        </div>
+        <div class="strength-card">
+          <span class="strength-mark">04</span>
+          <p>Comfortable picking up real project work under guidance</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="contact-card">
+        <div class="contact-left">
+          <p class="eyebrow">// contact.sh</p>
+          <h2>Let's build something.</h2>
+          <p class="contact-desc">
+            I'm looking for internship or junior backend developer roles where I can
+            keep learning while contributing real, working code. If that's what
+            you're hiring for — let's talk.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:rajanparmar609@gmail.com" class="contact-link">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">rajanparmar609@gmail.com</span>
+            </a>
+            <a href="tel:+919313874256" class="contact-link">
+              <span class="contact-link-label">Phone</span>
+              <span class="contact-link-value">+91 93138 74256</span>
+            </a>
+            <a href="https://linkedin.com/in/rajan-parmar-07969224b" target="_blank" rel="noopener"
+              class="contact-link">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">/in/rajan-parmar</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@company.com" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" placeholder="Tell me about the role..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-full">Send message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Parmar Rajan — built from scratch with HTML, CSS &amp; JavaScript.</p>
+    <a href="#about" class="back-top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

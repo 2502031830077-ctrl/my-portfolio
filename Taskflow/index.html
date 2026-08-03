@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskFlow — command-line task manager</title>
+<meta name="description" content="TaskFlow — a fast, keyboard-first task manager. Type a task, tag its priority and category inline, and go.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scan"></div>
+
+<div class="app">
+
+  <!-- ===== Header ===== -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">&gt;_</span>
+      <span class="brand-name">TaskFlow<span class="cursor">_</span></span>
+    </div>
+    <div class="topbar-status">
+      <span class="dot" id="saveDot" aria-hidden="true"></span>
+      <span id="saveLabel">saved locally</span>
+    </div>
+  </header>
+
+  <p class="tagline">A command-line task manager for people who think in checklists. Everything lives in this browser — nothing leaves your machine.</p>
+
+  <!-- ===== Command bar ===== -->
+  <section class="cmdbar" aria-label="Add a task">
+    <label class="cmd-prompt" for="cmdInput">$</label>
+    <input
+      id="cmdInput"
+      class="cmd-input"
+      type="text"
+      autocomplete="off"
+      spellcheck="false"
+      placeholder="add a task… try: Finish resume !high #job"
+    />
+    <button class="cmd-run" id="cmdRun" type="button" aria-label="Add task">enter ↵</button>
+  </section>
+  <p class="cmd-hint">
+    <span><b>!high</b> · <b>!medium</b> · <b>!low</b> sets priority</span>
+    <span><b>#tag</b> sets a category</span>
+  </p>
+
+  <!-- ===== Stats ===== -->
+  <section class="stats" aria-label="Task summary">
+    <div class="stat">
+      <span class="stat-num" id="statTotal">0</span>
+      <span class="stat-label">total</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="statActive">0</span>
+      <span class="stat-label">active</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="statDone">0</span>
+      <span class="stat-label">done</span>
+    </div>
+    <div class="progress-track" role="progressbar" aria-label="Completion progress" aria-valuemin="0" aria-valuemax="100" id="progressBar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <span class="stat-pct" id="statPct">0%</span>
+  </section>
+
+  <!-- ===== Filters ===== -->
+  <section class="filters" aria-label="Filter tasks">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-tab is-active" data-filter="all">all</button>
+      <button class="filter-tab" data-filter="active">active</button>
+      <button class="filter-tab" data-filter="done">done</button>
+    </div>
+    <div class="filter-tags" id="filterTags"></div>
+    <input class="search-input" id="searchInput" type="text" placeholder="search…" autocomplete="off" spellcheck="false">
+  </section>
+
+  <!-- ===== Task list ===== -->
+  <section class="list-wrap" aria-label="Tasks">
+    <ul class="task-list" id="taskList"></ul>
+    <div class="empty-state" id="emptyState" hidden>
+      <p class="empty-line"><span class="prompt-ghost">$</span> <span id="emptyMsg">no tasks yet</span></p>
+      <p class="empty-sub">type in the bar above and hit enter to create your first one.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>keys: <b>Enter</b> add · <b>Esc</b> clear input · click a row to toggle done</span>
+    <span class="footer-brand">TaskFlow — built with HTML, CSS &amp; JavaScript</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

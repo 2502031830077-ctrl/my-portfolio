@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopSphere — everyday goods, sorted</title>
+<meta name="description" content="ShopSphere — a responsive e-commerce storefront demo with live stock tracking, category filters, and a cart that remembers you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Nav ===== -->
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">Shop<span class="logo-accent">Sphere</span></div>
+    <div class="nav-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.6" y2="16.6"></line></svg>
+      <input id="searchInput" type="text" placeholder="Search products…" autocomplete="off" spellcheck="false">
+    </div>
+    <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">// everyday goods, sorted by what's actually in stock</p>
+    <h1>Shop the shelf,<br> not the guesswork.</h1>
+    <p class="hero-sub">Every listing here tracks its own stock in real time — no "add to cart" surprises at checkout.</p>
+  </div>
+</section>
+
+<main class="shop">
+
+  <!-- ===== Filters ===== -->
+  <section class="filters" aria-label="Filter products">
+    <div class="cat-tabs" id="catTabs">
+      <button class="cat-tab is-active" data-cat="all">All</button>
+      <button class="cat-tab" data-cat="home">Home</button>
+      <button class="cat-tab" data-cat="kitchen">Kitchen</button>
+      <button class="cat-tab" data-cat="accessories">Accessories</button>
+      <button class="cat-tab" data-cat="stationery">Stationery</button>
+    </div>
+    <div class="sort-wrap">
+      <label for="sortSelect">Sort</label>
+      <select id="sortSelect">
+        <option value="popular">Popular</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="stock">Stock: Most Available</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- ===== Product grid ===== -->
+  <section class="grid-wrap" aria-label="Product listings">
+    <div class="product-grid" id="productGrid"></div>
+    <div class="empty-state" id="emptyState" hidden>
+      <p>No products match that search.</p>
+      <button class="link-btn" id="clearFilters">Clear filters</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>ShopSphere — built with HTML, CSS &amp; JavaScript. Demo store, no real payments.</span>
+</footer>
+
+<!-- ===== Cart drawer ===== -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h2>Your cart</h2>
+    <button class="icon-btn" id="cartClose" aria-label="Close cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-empty" id="cartEmpty">
+    <p>Your cart is empty.</p>
+    <p class="cart-empty-sub">Add something from the shelf.</p>
+  </div>
+
+  <div class="cart-footer" id="cartFooter">
+    <div class="cart-row">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">$0.00</span>
+    </div>
+    <p class="cart-note">Shipping and taxes calculated at checkout.</p>
+    <button class="btn-checkout" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<!-- ===== Checkout confirm modal ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-label="Order confirmation">
+    <div class="modal-check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <h3>Order placed</h3>
+    <p id="modalOrderId" class="modal-order-id"></p>
+    <p class="modal-sub">This is a demo checkout — no payment was taken and nothing ships.</p>
+    <button class="btn-checkout" id="modalClose">Back to shop</button>
+  </div>
+</div>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
