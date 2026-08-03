@@ -64,15 +64,48 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealTargets.forEach(el => revealObserver.observe(el));
 
 // ============================================
-// Contact form (front-end only — no backend wired up)
+// Contact form — submits to Formspree, no page reload
 // ============================================
 const contactForm = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
+const formSubmitBtn = contactForm.querySelector('button[type="submit"]');
+const formSubmitLabel = formSubmitBtn.textContent;
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const name = contactForm.elements['name'].value.trim();
 
-  formNote.textContent = `Thanks${name ? ', ' + name.split(' ')[0] : ''} — this form isn't connected to an inbox yet. Please email rajanparmar609@gmail.com directly for now.`;
-  contactForm.reset();
+  const name = contactForm.elements['name'].value.trim();
+  const firstName = name ? ', ' + name.split(' ')[0] : '';
+
+  formSubmitBtn.disabled = true;
+  formSubmitBtn.textContent = 'Sending…';
+  formNote.style.color = '';
+  formNote.textContent = 'Sending your message…';
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' },
+    });
+
+    if (response.ok) {
+      formNote.style.color = '';
+      formNote.textContent = `Thanks${firstName} — your message is on its way. I'll get back to you soon.`;
+      contactForm.reset();
+    } else {
+      const data = await response.json().catch(() => null);
+      const message = data && data.errors
+        ? data.errors.map(err => err.message).join(', ')
+        : 'Something went wrong sending that. Please try again or email me directly.';
+      formNote.style.color = '#f87171';
+      formNote.textContent = message;
+    }
+  } catch (err) {
+    formNote.style.color = '#f87171';
+    formNote.textContent = 'Network error — please email rajanparmar609@gmail.com directly.';
+  } finally {
+    formSubmitBtn.disabled = false;
+    formSubmitBtn.textContent = formSubmitLabel;
+  }
 });
