@@ -6,10 +6,10 @@
  * localhost). Change these if your MySQL setup differs.
  */
 
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'freshtable');
+define('DB_HOST', 'sql106.infinityfree.com');
+define('DB_USER', 'if0_42565770');
+define('DB_PASS', 'KZ4SQco2T9vhd');
+define('DB_NAME', 'if0_42565770_freshtable');
 
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
